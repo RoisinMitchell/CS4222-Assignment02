@@ -48,6 +48,7 @@ public class PlayList {
             result = track.getTitle().equalsIgnoreCase(title);
             if(result) {
                 tracks.remove(track);
+                break;
             }
         }
         return result;
@@ -57,7 +58,8 @@ public class PlayList {
         if(tracks.isEmpty()){
             System.out.println("\n-------------\nTHE LIST IS EMPTY\n-------------\n");
         }else{
-            System.out.println(tracks.toString());
+
+            System.out.println(this.toString());
         }
     }
     public void playAll(boolean random){
